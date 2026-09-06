@@ -46,20 +46,3 @@ int main(){
 
 
 
-
-
-
-
-/*
-Sample Test Cases:
-Input 1:
-5 10
-Output 1:
-Area=50, Perimeter=30
-
-Input 2:
-3 7
-Output 2:
-Area=21, Perimeter=20
-
-*/
