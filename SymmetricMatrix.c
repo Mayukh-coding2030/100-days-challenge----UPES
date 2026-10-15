@@ -1,0 +1,35 @@
+//Q76: Check if a matrix is symmetric.
+
+#include<stdio.h>
+int main(){
+    int r,c,i,j;
+    int a[100][100];
+    int symmetric = 1;
+    printf("Enter the rows and columns: ");
+    scanf("%d %d",&r,&c);
+    printf("Enter elements of matrix: ");
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    if(r!=c){
+        symmetric = 0;
+    }
+    else{
+        for(i=0;i<r;i++){
+            for(j=0;j<c;j++){
+                if(a[i][j]!=a[j][i]){
+                    symmetric = 0;
+                    break;
+                }
+            }
+            if(symmetric==0)
+            break;
+        }
+    }
+      if(symmetric ==1)
+      printf("True\n");
+      else printf("False\n");
+    return 0;
+}
