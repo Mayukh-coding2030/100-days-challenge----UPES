@@ -1,0 +1,48 @@
+//Q117: Write a program to take two sorted arrays of size m and n as input. Merge both the arrays such that the merged array is also sorted. Print the merged array.
+
+#include<stdio.h>
+int main(){
+    int n,m,i,j,k;
+    int nums1[100], nums2[100], merged[200];
+    printf("Enter the size of first array: ");
+    scanf("%d",&m);
+    printf("Enter the elemenst of first sorted array: ");
+    for(i=0;i<m;i++){
+        scanf("%d",&nums1[i]);
+    }
+    printf("Enter the size of second array: ");
+    scanf("%d",&n);
+    printf("Enter the elements of second sorted array: ");
+    for(i=0;i<n;i++){
+        scanf("%d",&nums2[i]);
+    }
+    i = 0;
+    j = 0;
+    k = 0;
+    while(i<m && j < n){
+        if(nums1[i] <= nums2[i]){
+            merged[k] = nums1[i];
+            i++;
+        } else{
+            merged[k] = nums2[j];
+            j++;
+        }
+        k++;
+    }
+    while(i<m){
+        merged[k] = nums1[i];
+        i++;
+        k++;
+    }
+    while(j<n){
+        merged[k] = nums2[j];
+        j++;
+        k++;
+    }
+    printf("Merged sorted array");
+    for(i=0;i<m+n;i++){
+        printf("%d ", merged[i]);
+    }
+    printf("\n");
+    return 0;
+}
